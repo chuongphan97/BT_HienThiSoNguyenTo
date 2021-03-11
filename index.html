@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let n = +prompt('Nhập n:');
+        if (n==0) {document.write('0 không phải là số nguyên tố');}
+        else if (n<4) {
+            for (let i=1;i<=n;i++) {
+                document.write(i + ' là số nguyên tố.<br>');
+            }
+        } else{  
+            
+        for (let f=1;f<=n;f++){
+            let count=0;
+            
+            for (let j=4;j<=f-1;j++){
+                if (f %j == 0) count = count+ 1;
+            }
+            if (count == 0) document.write(f + ' là số nguyên tố.<br>');
+        }
+    }
+    </script>
+    
+</body>
+</html>
